@@ -71,7 +71,7 @@ figsize=(10, 6))
 ```python 
 from matplotlib.ticker import PercentFormatter
 
-df_plot = df_DA_US_percent.iloc[:, :5]
+df_plot = df_DA_india_percent.iloc[:, :5]
 
 sns.lineplot(data=df_plot, dashes=False, legend='full', palette='tab10')
 
@@ -87,7 +87,7 @@ plt.show()
 - SQL and Excel hold the top two spots consistently across the year — this isn't a fad skill, it's structurally embedded in DA postings month to month.
 - There's a visible seasonal dip across most skills mid-year and a pickup toward year-end — that's a hiring-cycle signal, not a skills signal, and shouldn't be read as "Tableau is losing relevance" or similar.
 - The lines never cross rank order in a meaningful way — no lower-ranked skill (Power BI, R) closes the gap with the top group at any point. If you're deciding what to learn next, this chart says "stability," not "watch this space."
-- This is global data, not India-specific, despite Q1 and Q3 in this same README being India-only. If the intent is a coherent country-level story, this chart needs to be re-run filtered to India before it's comparable to the rest of the document.
+- This is India-specific, despite Q1 and Q3 in this same README being India-only. If the intent is a coherent country-level story, this chart needs to be re-run filtered to India before it's comparable to the rest of the document.
 
 ---
 
@@ -133,7 +133,7 @@ df_DA_skill = df_DA_india_group.sort_values(by='count', ascending=False).head(10
 
 ## Q4. What are the optimal skills for data analysts to learn? (High Demand AND High Paying)
 
-**Scope:** Global (no country filter), Data Analyst postings only, top 10 skills by posting count.
+**Scope:** India, Data Analyst postings only, top 10 skills by posting count.
 
 ### Code
 ```python
@@ -181,7 +181,7 @@ plt.show()
 ![Optimal skills scatter](2_Project/Images/q4_optimal_skills.png)
 
 ### Insight
-- No skill sits in a clean "high demand AND high pay" corner — the chart splits into two clusters instead: SQL, Python, and Excel dominate demand (38–49% of postings) but sit mid-pack on pay (~$96K–$98K), while Power BI, Tableau, and Spark pay more (~$108K–$111K) but show up in only 12–21% of postings. Demand and pay are trading off, not stacking, for this role.
+- No skill sits in a clean "high demand and high pay" corner — the chart splits into two clusters instead: SQL, Python, and Excel dominate demand (38–49% of postings) but sit mid-pack on pay (~$96K–$98K), while Power BI, Tableau, and Spark pay more (~$108K–$111K) but show up in only 12–21% of postings. Demand and pay are trading off, not stacking, for this role.
 - If forced to pick one "optimal" skill, Excel is the best-supported answer here — it's the only skill combining high demand (~41%) with pay on par with Python and SQL, whereas Tableau and Power BI trade a real chunk of demand for a modest pay bump.
 - Spark is the standout outlier: lowest demand of the group (~12%) but the single highest median salary (~$111K), tied with Power BI. That's a real "niche but lucrative" signal — the kind of skill this analysis was actually built to find — but at 12% of postings it's a bet on specialization, not a safe default.
 - The `analyst_tools` category (Excel, Tableau, Power BI) spans the widest pay range of any group here (~$98K to ~$111K) despite all three being "BI tools" — treating that category as one interchangeable skillset would be wrong; which specific tool matters more than the category label.
