@@ -32,8 +32,8 @@ df_skills_perc['skill_percentage'] = 100 * df_skills_perc['skill_count'] / df_sk
 ```
 
 ### Result
-![Top skills by raw count](2_Project\Images\q1_skill_counts.png)
-![Skill likelihood by role](2_Project\Images\q1_skill_likelihood_2.png)
+![Top skills by raw count](2_Project/Images/q1_skill_counts.png)
+![Skill likelihood by role](2_Project/Images/q1_skill_likelihood_2.png)
 
 ### Insight
 - SQL and Python are the only two skills that show up in the top-5 for **all three** roles — everything else (Excel, Tableau, Power BI, Spark, AWS, R) is role-specific.
@@ -81,7 +81,7 @@ plt.gca().yaxis.set_major_formatter
 plt.show()
 ```
 ### Result
-![Trending skills for Data Analysts](2_Project\Images\q2_trending_skills.png)
+![Trending skills for Data Analysts](2_Project/Images/q2_trending_skills.png)
 
 ### Insight
 - SQL and Excel hold the top two spots consistently across the year — this isn't a fad skill, it's structurally embedded in DA postings month to month.
@@ -113,8 +113,8 @@ df_DA_skill = df_DA_india_group.sort_values(by='count', ascending=False).head(10
 ```
 
 ### Result
-![Salary distribution by role](2_Project/Images\q3_salary_by_role.png)
-![Top paying vs top demand skills](2_Project\Images\q3_skill_pay.png)
+![Salary distribution by role](2_Project/Images/q3_salary_by_role.png)
+![Top paying vs top demand skills](2_Project/Images/q3_skill_pay.png)
 
 **Adding role variety (seniority + adjacent titles)**
 - Machine Learning Engineer has by far the widest salary box of any role — floor near Data Analyst levels, ceiling near Data Scientist levels. It's the least predictable role to price, which cuts both ways: highest upside, but also the least certainty going in.
@@ -178,7 +178,7 @@ plt.show()
 ```
 
 ### Result
-![Optimal skills scatter](2_Project\Images\q4_optimal_skills.png)
+![Optimal skills scatter](2_Project/Images/q4_optimal_skills.png)
 
 ### Insight
 - No skill sits in a clean "high demand AND high pay" corner — the chart splits into two clusters instead: SQL, Python, and Excel dominate demand (38–49% of postings) but sit mid-pack on pay (~$96K–$98K), while Power BI, Tableau, and Spark pay more (~$108K–$111K) but show up in only 12–21% of postings. Demand and pay are trading off, not stacking, for this role.
